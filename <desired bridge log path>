@@ -96,3 +96,8 @@ INFO 2025-12-04 14:24:52,660 daemon Exiting due to SIGINT
 INFO 2025-12-04 14:25:07,539 judge_handler Judge connected from: ('172.17.0.2', 49050)
 INFO 2025-12-04 14:25:07,543 judge_handler Judge authenticated: ('172.17.0.2', 49050) (judge1)
 INFO 2025-12-04 14:25:07,543 judge_list Minimum tier changed from None to 3
+INFO 2025-12-04 15:09:33,653 judge_list Minimum tier changed from 3 to None
+INFO 2025-12-04 15:09:33,659 judge_handler Judge disconnected from: ('172.17.0.2', 49050) with name judge1
+INFO 2025-12-04 15:11:08,194 judge_handler Judge connected from: ('172.17.0.2', 41398)
+INFO 2025-12-04 15:11:08,198 judge_handler Judge authenticated: ('172.17.0.2', 41398) (judge1)
+INFO 2025-12-04 15:11:08,198 judge_list Minimum tier changed from None to 3
