@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('About') }} - {{ SITE_LONG_NAME }}{% endblock %}
+
+{% block content_title %}{{ _('About') }} {{ SITE_LONG_NAME }}{% endblock %}
+
+{% block body %}
+<div class="about-page">
+    <div class="about-section intro">
+        <h3>{{ _('Welcome to') }} {{ SITE_LONG_NAME }}</h3>
+        <p>
+            {{ SITE_LONG_NAME }} {{ _('is a modern online judge platform designed to help students and developers improve their algorithmic coding skills.') }}
+            {{ _('We provide a vast collection of problems, contests, and a vibrant community to support your learning journey.') }}
+        </p>
+    </div>
+
+    <div class="about-section mission">
+        <h3>{{ _('Our Mission') }}</h3>
+        <p>
+            {{ _('Our mission is to democratize access to high-quality computer science education and competitive programming resources.') }}
+            {{ _('We believe that everyone should have the opportunity to learn and excel in programming.') }}
+        </p>
+    </div>
+
+    <div class="about-section features">
+        <h3>{{ _('Key Features') }}</h3>
+        <ul class="features-list">
+            <li>
+                <strong>{{ _('Extensive Problem Archive') }}</strong>
+                <p>{{ _('Thousands of problems across various difficulty levels and topics.') }}</p>
+            </li>
+            <li>
+                <strong>{{ _('Real-time Contests') }}</strong>
+                <p>{{ _('Participate in regular contests to test your skills against others.') }}</p>
+            </li>
+            <li>
+                <strong>{{ _('Multiple Languages') }}</strong>
+                <p>{{ _('Support for a wide range of programming languages including C++, Java, Python, and more.') }}</p>
+            </li>
+            <li>
+                <strong>{{ _('Community Support') }}</strong>
+                <p>{{ _('Join discussions, ask questions, and learn from peers.') }}</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="about-section contact">
+        <h3>{{ _('Contact Us') }}</h3>
+        <p>
+            {{ _('Have questions or feedback? Reach out to us at:') }} 
+            <a href="mailto:{{ misc_config.contact_email|default('contact@example.com') }}">
+                {{ misc_config.contact_email|default('contact@example.com') }}
+            </a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .about-page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .about-section {
+        margin-bottom: 40px;
+    }
+    .about-section h3 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .about-section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .features-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    .features-list li {
+        background: rgba(0,0,0,0.03);
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .features-list li strong {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #007bff; /* Example accent color */
+    }
+    
+    /* Dark mode adjustments */
+    @media (prefers-color-scheme: dark) {
+        .about-section h3 {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+        .features-list li {
+            background: rgba(255,255,255,0.05);
+        }
+        .features-list li strong {
+            color: #66b0ff;
+        }
+    }
+</style>
+{% endblock %}
