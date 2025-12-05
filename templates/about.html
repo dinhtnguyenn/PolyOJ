@@ -72,18 +72,25 @@
     :root {
         --primary-color: #4f46e5;
         --secondary-color: #ec4899;
+        
+        /* Default Light Mode Colors */
         --bg-card: #ffffff;
-        --text-main: #1f2937;
-        --text-muted: #6b7280;
+        --text-main: #111827; /* Darker for better contrast */
+        --text-muted: #4b5563;
+        --bg-feature: #f9fafb;
+        --border-color: #e5e7eb;
         --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
 
-    [data-theme="dark"] {
+    /* Dark Mode Support - Handles both data-theme attribute and body.night class */
+    [data-theme="dark"], body.night {
         --bg-card: #1f2937;
         --text-main: #f3f4f6;
         --text-muted: #9ca3af;
+        --bg-feature: rgba(255, 255, 255, 0.05);
+        --border-color: rgba(255, 255, 255, 0.1);
     }
 
     .about-page {
@@ -92,6 +99,18 @@
         padding: 40px 20px;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         color: var(--text-main);
+    }
+
+    /* Explicitly set colors for text elements to override any global theme styles */
+    .about-page h1, 
+    .about-page h2, 
+    .about-page h3, 
+    .about-page strong {
+        color: var(--text-main);
+    }
+
+    .about-page p {
+        color: var(--text-muted);
     }
 
     /* Hero Section */
@@ -109,6 +128,8 @@
         -webkit-text-fill-color: transparent;
         margin-bottom: 10px;
         letter-spacing: -0.02em;
+        /* Fallback for browsers that don't support background-clip text */
+        color: var(--primary-color); 
     }
 
     .subtitle {
@@ -138,7 +159,7 @@
         border-radius: 16px;
         box-shadow: var(--shadow-md);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid rgba(0,0,0,0.05);
+        border: 1px solid var(--border-color);
     }
 
     .about-card:hover {
@@ -176,6 +197,7 @@
         display: inline-block;
         left: 50%;
         transform: translateX(-50%);
+        color: var(--text-main);
     }
     
     .section-title::after {
@@ -197,7 +219,8 @@
     .feature-item {
         text-align: center;
         padding: 25px;
-        background: rgba(255, 255, 255, 0.5);
+        background: var(--bg-feature);
+        border: 1px solid var(--border-color);
         border-radius: 12px;
         transition: all 0.3s ease;
     }
@@ -236,6 +259,7 @@
         padding: 40px;
         background: linear-gradient(to right, rgba(79, 70, 229, 0.05), rgba(236, 72, 153, 0.05));
         border-radius: 16px;
+        border: 1px solid var(--border-color);
     }
 
     .contact-link {
@@ -259,21 +283,6 @@
         to {
             opacity: 1;
             transform: translateY(0);
-        }
-    }
-
-    /* Dark Mode Support (Generic) */
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --bg-card: #1f2937;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-        }
-        .feature-item {
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .feature-item:hover {
-            background: rgba(255, 255, 255, 0.05);
         }
     }
 </style>
