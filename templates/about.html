@@ -5,182 +5,252 @@
 {% block content_title %}Về PolyOJ{% endblock %}
 
 {% block body %}
-<div class="about-page">
-    <div class="hero-section">
-        <h1 class="gradient-text">Chào mừng đến với PolyOJ</h1>
-        <p class="subtitle">Nền tảng luyện tập lập trình và chấm bài tự động hiện đại</p>
-    </div>
-
-    <div class="about-grid">
-        <div class="about-card intro">
-            <div class="card-icon">🚀</div>
-            <h3>Giới thiệu</h3>
-            <p>
-                PolyOJ là website luyện code online được thiết kế để giúp sinh viên và các lập trình viên nâng cao kỹ năng tư duy thuật toán. 
-                Chúng tôi cung cấp một môi trường học tập chuyên nghiệp, nơi bạn có thể thử thách bản thân với hàng ngàn bài tập từ cơ bản đến nâng cao.
-            </p>
-        </div>
-
-        <div class="about-card mission">
-            <div class="card-icon">🎯</div>
-            <h3>Sứ mệnh</h3>
-            <p>
-                Sứ mệnh của chúng tôi là phổ cập kiến thức khoa học máy tính và lập trình thi đấu. 
-                PolyOJ tin rằng mọi người đều xứng đáng có cơ hội tiếp cận với nền giáo dục chất lượng cao và phát triển đam mê công nghệ của mình.
-            </p>
-        </div>
-    </div>
-
-    <div class="features-section">
-        <h2 class="section-title">Tại sao chọn PolyOJ?</h2>
-        <div class="features-list">
-            <div class="feature-item">
-                <div class="feature-icon">📚</div>
-                <strong>Kho bài tập khổng lồ</strong>
-                <p>Hàng ngàn bài tập đa dạng chủ đề và độ khó, giúp bạn rèn luyện tư duy logic mỗi ngày.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🏆</div>
-                <strong>Thi đấu thời gian thực</strong>
-                <p>Tham gia các kỳ thi (Contest) định kỳ để cọ xát và khẳng định năng lực trên bảng xếp hạng.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">💻</div>
-                <strong>Đa ngôn ngữ</strong>
-                <p>Hỗ trợ chấm bài cho nhiều ngôn ngữ phổ biến như C++, Java, Python, Go, và nhiều hơn nữa.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">🤝</div>
-                <strong>Cộng đồng sôi nổi</strong>
-                <p>Thảo luận, chia sẻ lời giải và học hỏi kinh nghiệm từ cộng đồng lập trình viên tài năng.</p>
+<div class="about-wrapper">
+    <div class="about-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="brand-google-blue">Poly</span><span class="brand-google-red">OJ</span>
+                </h1>
+                <p class="hero-subtitle">Nền tảng luyện tập lập trình chuẩn quốc tế</p>
+                <div class="hero-badges">
+                    <span class="badge">🚀 Nhanh chóng</span>
+                    <span class="badge">🎯 Chính xác</span>
+                    <span class="badge">🌏 Cộng đồng</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="contact-section">
-        <h3>Liên hệ với chúng tôi</h3>
-        <p>
-            Bạn có câu hỏi hoặc đóng góp ý kiến? Đừng ngần ngại liên hệ qua email:
-            <a href="mailto:{{ misc_config.contact_email|default('nguyendinhteki@gmail.com') }}" class="contact-link">
-                {{ misc_config.contact_email|default('nguyendinhteki@gmail.com') }}
-            </a>
-        </p>
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Intro Card -->
+            <div class="card intro-card">
+                <div class="card-content">
+                    <div class="icon-circle blue-bg">
+                        <span class="material-icon">�</span>
+                    </div>
+                    <h2>Giới thiệu</h2>
+                    <p>
+                        PolyOJ là nền tảng chấm bài tự động (Online Judge) hiện đại, được thiết kế tối ưu cho việc học tập và rèn luyện tư duy thuật toán. 
+                        Với giao diện thân thiện và tốc độ xử lý vượt trội, chúng tôi mang đến trải nghiệm lập trình mượt mà nhất cho cộng đồng.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="card mission-card">
+                <div class="card-content">
+                    <div class="icon-circle red-bg">
+                        <span class="material-icon">🎯</span>
+                    </div>
+                    <h2>Sứ mệnh</h2>
+                    <p>
+                        Chúng tôi tin rằng lập trình là kỹ năng của tương lai. Sứ mệnh của PolyOJ là xóa bỏ rào cản tiếp cận tri thức, 
+                        tạo ra sân chơi công bằng và truyền cảm hứng cho thế hệ lập trình viên trẻ Việt Nam vươn tầm thế giới.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section">
+            <h2 class="section-header">Tại sao chọn PolyOJ?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Kho bài tập lớn</h3>
+                    <p>Hệ thống bài tập đa dạng từ cơ bản đến nâng cao, phân loại chi tiết theo chủ đề.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Chấm bài siêu tốc</h3>
+                    <p>Hệ thống chấm bài thời gian thực với độ trễ thấp, hỗ trợ đa ngôn ngữ lập trình.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Contest định kỳ</h3>
+                    <p>Tổ chức các kỳ thi lập trình thường xuyên để cọ xát và đánh giá năng lực.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Cộng đồng lớn</h3>
+                    <p>Nơi trao đổi, thảo luận và chia sẻ kiến thức của hàng ngàn lập trình viên.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="card contact-card">
+                <div class="card-content center-align">
+                    <h2>Liên hệ & Hợp tác</h2>
+                    <p>Chúng tôi luôn lắng nghe ý kiến đóng góp từ cộng đồng để phát triển nền tảng tốt hơn.</p>
+                    <a href="mailto:{{ misc_config.contact_email|default('nguyendinhteki@gmail.com') }}" class="google-button">
+                        <span class="btn-icon">✉️</span>
+                        Gửi Email cho chúng tôi
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <style>
+    /* Google Material Design Inspired Variables */
     :root {
-        --primary-color: #4f46e5;
-        --secondary-color: #ec4899;
+        /* Light Mode Palette */
+        --surface-color: #ffffff;
+        --background-color: #f8f9fa; /* Google Grey 50 */
+        --text-primary: #202124; /* Google Grey 900 */
+        --text-secondary: #5f6368; /* Google Grey 700 */
+        --google-blue: #1a73e8;
+        --google-red: #ea4335;
+        --google-yellow: #fbbc04;
+        --google-green: #34a853;
+        --border-color: #dadce0;
         
-        /* Default Light Mode Colors */
-        --bg-card: #ffffff;
-        --text-main: #111827; /* Darker for better contrast */
-        --text-muted: #4b5563;
-        --bg-feature: #f9fafb;
-        --border-color: #e5e7eb;
-        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        /* Elevations */
+        --shadow-1: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        --shadow-2: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+        --radius-lg: 24px;
+        --radius-md: 12px;
     }
 
-    /* Dark Mode Support - Handles both data-theme attribute and body.night class */
-    [data-theme="dark"], body.night {
-        --bg-card: #1f2937;
-        --text-main: #f3f4f6;
-        --text-muted: #9ca3af;
-        --bg-feature: rgba(255, 255, 255, 0.05);
-        --border-color: rgba(255, 255, 255, 0.1);
+    /* Dark Mode Palette - Broad support for various class names used by CMS/Frameworks */
+    [data-theme="dark"], 
+    body.night, 
+    html.night body, 
+    .dark-mode {
+        --surface-color: #303134; /* Google Dark Surface */
+        --background-color: #202124; /* Google Dark Background */
+        --text-primary: #e8eaed;
+        --text-secondary: #bdc1c6;
+        --google-blue: #8ab4f8; /* Lighter blue for dark mode */
+        --google-red: #f28b82;
+        --google-yellow: #fdd663;
+        --google-green: #81c995;
+        --border-color: #5f6368;
+        
+        --shadow-1: 0 1px 2px 0 rgba(0,0,0,0.3), 0 1px 3px 1px rgba(0,0,0,0.15);
+        --shadow-2: 0 4px 8px 3px rgba(0,0,0,0.15);
     }
 
-    .about-page {
-        max-width: 1000px;
-        margin: 0 auto;
+    /* Base Styles */
+    .about-wrapper {
+        font-family: 'Google Sans', 'Roboto', 'Segoe UI', Arial, sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
         padding: 40px 20px;
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        color: var(--text-main);
+        min-height: 100vh;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Explicitly set colors for text elements to override any global theme styles */
-    .about-page h1, 
-    .about-page h2, 
-    .about-page h3, 
-    .about-page strong {
-        color: var(--text-main);
+    .about-container {
+        max-width: 1100px;
+        margin: 0 auto;
     }
 
-    .about-page p {
-        color: var(--text-muted);
+    /* Typography Overrides */
+    h1, h2, h3, p {
+        margin: 0;
     }
 
     /* Hero Section */
     .hero-section {
         text-align: center;
         margin-bottom: 60px;
-        animation: fadeInDown 0.8s ease-out;
+        padding: 40px 0;
     }
 
-    .gradient-text {
-        font-size: 3em;
-        font-weight: 800;
-        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 10px;
-        letter-spacing: -0.02em;
-        /* Fallback for browsers that don't support background-clip text */
-        color: var(--primary-color); 
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
     }
 
-    .subtitle {
-        font-size: 1.25em;
-        color: var(--text-muted);
-        max-width: 600px;
-        margin: 0 auto;
+    .brand-google-blue { color: var(--google-blue); }
+    .brand-google-red { color: var(--google-red); }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+        font-weight: 400;
     }
 
-    /* Grid Layout */
-    .about-grid {
+    .hero-badges {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .badge {
+        background-color: var(--surface-color);
+        border: 1px solid var(--border-color);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    /* Cards */
+    .card {
+        background-color: var(--surface-color);
+        border-radius: var(--radius-lg);
+        padding: 32px;
+        box-shadow: var(--shadow-1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid transparent; /* Prevent layout shift on border change */
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-2);
+    }
+
+    /* Content Grid */
+    .content-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
         margin-bottom: 60px;
     }
 
     @media (min-width: 768px) {
-        .about-grid {
+        .content-grid {
             grid-template-columns: 1fr 1fr;
         }
     }
 
-    .about-card {
-        background: var(--bg-card);
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: var(--shadow-md);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid var(--border-color);
+    .icon-circle {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        font-size: 32px;
     }
 
-    .about-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
+    .blue-bg { background-color: rgba(26, 115, 232, 0.1); color: var(--google-blue); }
+    .red-bg { background-color: rgba(234, 67, 53, 0.1); color: var(--google-red); }
+
+    .card h2 {
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+        color: var(--text-primary);
     }
 
-    .card-icon {
-        font-size: 2.5em;
-        margin-bottom: 15px;
-    }
-
-    .about-card h3 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
-        font-weight: 700;
-    }
-
-    .about-card p {
+    .card p {
+        font-size: 1.1rem;
         line-height: 1.6;
-        color: var(--text-muted);
+        color: var(--text-secondary);
     }
 
     /* Features Section */
@@ -188,102 +258,89 @@
         margin-bottom: 60px;
     }
 
-    .section-title {
+    .section-header {
         text-align: center;
-        font-size: 2em;
-        font-weight: 700;
-        margin-bottom: 40px;
-        position: relative;
-        display: inline-block;
-        left: 50%;
-        transform: translateX(-50%);
-        color: var(--text-main);
-    }
-    
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 60px;
-        height: 4px;
-        background: var(--primary-color);
-        margin: 10px auto 0;
-        border-radius: 2px;
+        font-size: 2.25rem;
+        margin-bottom: 48px;
+        color: var(--text-primary);
     }
 
-    .features-list {
+    .features-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 30px;
+        gap: 24px;
     }
 
-    .feature-item {
+    .feature-card {
+        background-color: var(--surface-color);
+        padding: 24px;
+        border-radius: var(--radius-lg);
         text-align: center;
-        padding: 25px;
-        background: var(--bg-feature);
         border: 1px solid var(--border-color);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        transition: background-color 0.2s;
     }
-
-    .feature-item:hover {
-        background: var(--bg-card);
-        box-shadow: var(--shadow-md);
+    
+    .feature-card:hover {
+        background-color: rgba(26, 115, 232, 0.04); /* Subtle blue tint on hover */
+        border-color: var(--google-blue);
     }
 
     .feature-icon {
-        font-size: 2em;
-        margin-bottom: 15px;
-        display: inline-block;
-        padding: 10px;
-        background: rgba(79, 70, 229, 0.1);
-        border-radius: 50%;
-        color: var(--primary-color);
+        font-size: 3rem;
+        margin-bottom: 16px;
     }
 
-    .feature-item strong {
-        display: block;
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        color: var(--text-main);
+    .feature-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
+        color: var(--text-primary);
     }
 
-    .feature-item p {
-        font-size: 0.95em;
-        color: var(--text-muted);
+    .feature-card p {
+        font-size: 1rem;
+        color: var(--text-secondary);
         line-height: 1.5;
     }
 
     /* Contact Section */
-    .contact-section {
+    .contact-card {
+        background: linear-gradient(135deg, var(--surface-color) 0%, rgba(26, 115, 232, 0.05) 100%);
+    }
+
+    .center-align {
         text-align: center;
-        padding: 40px;
-        background: linear-gradient(to right, rgba(79, 70, 229, 0.05), rgba(236, 72, 153, 0.05));
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact-link {
-        color: var(--primary-color);
-        font-weight: 600;
+    .google-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--google-blue);
+        color: white;
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 500;
         text-decoration: none;
-        transition: color 0.2s;
+        margin-top: 24px;
+        transition: background-color 0.2s, box-shadow 0.2s;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    .contact-link:hover {
-        color: var(--secondary-color);
-        text-decoration: underline;
+    .google-button:hover {
+        background-color: #1557b0; /* Darker blue */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        text-decoration: none;
+        color: white;
     }
 
-    /* Animations */
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+        .hero-title { font-size: 2.5rem; }
+        .hero-subtitle { font-size: 1.2rem; }
+        .card { padding: 24px; }
     }
 </style>
 {% endblock %}
