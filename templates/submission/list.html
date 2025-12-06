@@ -291,6 +291,58 @@
         display: block;
         margin: 0 auto;
     }
+
+    .status-info-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+        padding: 16px 20px;
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    }
+    .status-info-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #202124;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .status-info-title i {
+        color: #5f6368;
+    }
+    .status-info-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+    .status-item {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #3c4043;
+    }
+    .status-badge {
+        padding: 2px 8px;
+        border-radius: 12px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 11px;
+        margin-right: 8px;
+        min-width: 36px;
+        text-align: center;
+        display: inline-block;
+        line-height: 1.5;
+    }
+    .badge-ac { background-color: #0F9D58; }
+    .badge-wa { background-color: #DB4437; }
+    .badge-tle { background-color: #F4B400; }
+    .badge-mle { background-color: #FF6D00; }
+    .badge-re { background-color: #AB47BC; }
+    .badge-ce { background-color: #546E7A; }
+    .badge-ie { background-color: #757575; }
 </style>
 {% endblock %}
 
@@ -350,6 +402,21 @@
     <div id="content-left" class="submission">
         <div class="ws-closed">
             <a href="javascript:void(0)">{{ _('You were disconnected. Refresh to show latest updates.') }}</a>
+        </div>
+
+        <div class="status-info-card">
+            <div class="status-info-title">
+                <i class="fa fa-info-circle"></i> {{ _('Status Codes') }}
+            </div>
+            <div class="status-info-list">
+                <div class="status-item"><span class="status-badge badge-ac">AC</span> Accepted</div>
+                <div class="status-item"><span class="status-badge badge-wa">WA</span> Wrong Answer</div>
+                <div class="status-item"><span class="status-badge badge-tle">TLE</span> Time Limit Exceeded</div>
+                <div class="status-item"><span class="status-badge badge-mle">MLE</span> Memory Limit Exceeded</div>
+                <div class="status-item"><span class="status-badge badge-re">RE</span> Runtime Error</div>
+                <div class="status-item"><span class="status-badge badge-ce">CE</span> Compilation Error</div>
+                <div class="status-item"><span class="status-badge badge-ie">IE</span> Internal Error</div>
+            </div>
         </div>
 
         <div id="submissions-table">
