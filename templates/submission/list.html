@@ -357,13 +357,6 @@
             <a href="javascript:void(0)">{{ _('You were disconnected. Refresh to show latest updates.') }}</a>
         </div>
 
-        Tuyệt vời\! Tôi sẽ điều chỉnh mã CSS để sử dụng **7 màu sắc khác nhau** (theo cảm hứng từ cầu vồng hoặc bảng màu
-        Material Design) cho 7 mã trạng thái không phải là `IE` (Internal Error) và giữ `IE` là màu xám/tím để phân biệt
-        lỗi hệ thống.
-
-        Đây là đoạn HTML với CSS đã được cập nhật:
-
-        ```html
         <style>
             /* Base styles for the container */
             .google-status-grid {
@@ -502,7 +495,6 @@
                 </div>
             </div>
         </div>
-        ```
 
         <div id="submissions-table">
             {% set profile_id = request.profile.id if request.user.is_authenticated else 0 %}
